@@ -1,0 +1,384 @@
+body{
+  background: url(../../image/loginBackground.jpg) no-repeat;
+  background-size:cover;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixed{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-demo{
+  position: relative;
+  
+  width: 400px;
+  height: 600px;
+}
+
+/* 切换按钮所在的白色区域 */
+.switch{
+	background: rgba(255,255,255,0.95);
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* 切换按钮 */
+#change:checked+label,
+/* +用来选择同级后面最近的元素  */
+#change:not(:checked)+label{
+  background-color: #9bd7ff;
+  color: white;
+  width: 280px;
+  padding: 8px 0;
+/*   用padding方便文字垂直居中 */
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 8px;
+  user-select: none;
+  transition: all 0.1s;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* 旋转体 */
+.turn{
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  perspective: 800px;
+/*   旋转的时候的透视效果 */
+}
+.over{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.6s ease;
+/*   旋转持续时间 */
+/*   ease是慢快慢 */
+}
+#change:checked
+~
+.turn .over{
+  transform: rotateY(180deg);
+}
+
+#change+label:hover{
+	background-color: #6fc6ff;
+}
+#change+label:active{
+	background-color: #9bd7ff;
+}
+form{
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  height: 100%;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+.sign{
+  transform: rotateY(180deg);
+}
+
+
+h1, h2{
+  color: #1f2029;
+  user-select: none;
+}
+h1{
+  margin-top: 38px;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 1px);
+}
+
+.ntext{
+  background-color: #4E495D;
+  width: 70%;
+  height: 48px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: #c4c3ca;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 1px);
+}
+
+.ntext2{
+  background-color: #4E495D;
+  width: 70%;
+  height: 48px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: #c4c3ca;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 1px);
+}
+
+#userClass{
+	display: none;
+	background-color: #4E495D;
+	width: 70%;
+	height: 48px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	padding: 0 16px;
+	font-size: 18px;
+	color: #c4c3ca;
+	font-weight: 500;
+	outline: none;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+	transform-style: preserve-3d;
+	transform: translate3d(0, 0, 1px);
+}
+
+.theradio{
+	margin:0px;
+	width: 70%;
+	height: 48px;
+	transform-style: preserve-3d;
+	transform: translate3d(0, 0, 1px);
+}
+
+.theid{
+	width: 100%;
+	height: 48px;
+	margin-bottom: 15px;
+	transform-style: preserve-3d;
+	transform: translate3d(0, 0, 1px);
+}
+.theid select{
+	background-color: #4E495D;
+	color: #c4c3ca;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+	width: calc(70% + 32px);
+	height: 100%;
+}
+.theid select:hover{
+	background:-moz-linear-gradient(left,#4E495D,#585269,#4E495D);/*Mozilla*/
+	background:-webkit-gradient(linear,0 50%,100% 50%,from(#4E495D),to(#585269),to(#4E495D));/*Old gradient for webkit*/
+	background:-webkit-linear-gradient(left,#4E495D,#585269,#4E495D);/*new gradient for Webkit*/
+	background:-o-linear-gradient(left,#4E495D,#585269,#4E495D); /*Opera11*/
+}
+
+.identity{
+	position:relative;
+	cursor: pointer;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 1px);
+}
+.identity+label{
+	position:relative;
+	color: black;
+	font-size:15px;
+	cursor: pointer;
+	transform-style: preserve-3d;
+ 	transform: translate3d(0, 0, 1px);
+}
+
+.login input:nth-child(-n+3){
+/*   选择class为login的子元素中的前三个input */
+  margin: 15px 0;
+}
+
+
+
+.btn{
+  background-color: #20a6ff;
+  border: none;
+  width: 280px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 6px 0;
+  color: white;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.1s;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 1px);
+}
+.btn:hover{
+	background-color: #069bff;
+	margin-top: 14.8px;
+	padding: 6.5px 0;
+	width: 281px;
+}
+.btn:active{
+	background-color: #46b5ff;
+	color: #f4f4f4;
+	margin-top: 15px;
+	padding: 6px 0;
+	width: 280px;
+}
+
+.btn2{
+  background-color: #20a6ff;
+  border: none;
+  width: 280px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 6px 0;
+  color: white;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.1s;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 1px);
+}
+.btn2:hover{
+	background-color: #069bff;
+	margin-top: 14.8px;
+	padding: 6.5px 0;
+	width: 281px;
+}
+.btn2:active{
+	background-color: #46b5ff;
+	color: #f4f4f4;
+	margin-top: 15px;
+	padding: 6px 0;
+	width: 280px;
+}
+/* *{ */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* } */
+/* a{ */
+/* 	text-decoration: none;  */
+/* } */
+
+/* input,button{ */
+/* 	background: transparent; */
+/* 	border:none; */
+/* 	outline:none; */
+/* } */
+/* body{ */
+/* 	height: 100vh; */
+/* 	background: linear-gradient(#e74c3c,#f1c40f); */
+	
+/* 	display:flex; */
+/* 	justify-content: center; */
+/* 	align-items:center; */
+/* 	font-size: 16px; */
+/* 	color: #03e9f4; */
+/* } */
+/* .loginBox{ */
+/* 	width: 400px; */
+/* 	height: 364px; */
+/* 	background: rgba(0,0,0,0.5); */
+/* 	padding: 40px; */
+/* 	box-sizing: border-box; */
+/* 	box-shadow: 0px 15px 25px 0 rgba(0,0,0,0.6); */
+/* } */
+/* h2{ */
+/* 	text-align: center; */
+/* 	color:#fff; */
+/* 	margin-bottom: 30px; */
+/* } */
+/* .item{ */
+/* 	height:45px; */
+/* 	border-bottom:1px solid #fff; */
+/* 	position: relative; */
+/* }	 */
+
+/* .item input{ */
+/* 	width: 100%; */
+/* 	height:100%; */
+/* 	color:#fff; */
+/* 	padding-top:20px; */
+/* 	box-sizing:border-box; */
+/* } */
+/* .item label{ */
+/* 	position:absolute; */
+/* 	top: 12px; */
+/* 	left: 0; */
+/* } */
+/* .item input:focus+label,.item input:valid+label{ */
+/* 	top: 0px; */
+/* 	font-size: 12px; */
+/* } */
+/* .item label{ */
+/* 	position: absolute; */
+/* 	left: 0; */
+/* 	top:12px; */
+/* 	transition: all 0.5s linear; */
+/* } */
+/* .btn{ */
+/* 	padding: 10px; */
+/* 	margin-top: 30px; */
+/* 	width: 100%; */
+/* 	height:100%; */
+/* 	overflow: hidden; */
+/* 	border-radius: 5px; */
+/* 	color: #03e9f4; */
+/* 	position: relative; */
+/* 	letter-spacing: 2px; */
+/* 	box-shadow: 0 0 0 1px #03E9F4; */
+/* 	transition: all 0.5s; */
+/* } */
+/* .btn:hover{ */
+/* 	background: #03E9F4; */
+/* 	border-radius: 5px; */
+/* 	color:#FFFFFF ; */
+/* 	box-shadow: 0 0 5px 0 #03E9F4, */
+/* 				0 0 25px 0 #03E9F4, */
+/* 				0 0 50px 0 #03E9F4, */
+/* 				0 0 100px 0 #03E9F4; */
+/* } */
+/* .item2{ */
+/* 	padding-top: 40px; */
+/* } */
+/* #auto{ */
+/* 	float:left; */
+/* 	margin-top: 4px; */
+	
+/* } */
+/* .item2 label{ */
+/* 	font-size:small; */
+/* 	padding-top: 60px; */
+/* 	margin-left: 3px; */
+/* } */
+
+
+/* ul li { */
+/* 	width: 30px; */
+/* 	height: 30px; */
+/* 	border: 0.5px solid #55ffff; */
+/* 	position: absolute; */
+/* 	list-style:none; */
+/* } */

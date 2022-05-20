@@ -1,0 +1,110 @@
+@charset "UTF-8";
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: url(../../image/bedBackground.jpg) no-repeat;
+	background-size:cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.switch{
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  border-radius: 8px;
+  text-align: center;
+}
+form{
+	
+	text-align: center;
+}
+select{
+	background-color: #4E495D;
+	width: 70%;
+	height: 48px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	padding: 0 16px;
+	font-size: 18px;
+	color: #c4c3ca;
+	font-weight: 500;
+	outline: none;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+}
+input[type="text"]{
+	background-color: #4E495D;
+	width: 70%;
+	height: 48px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	padding: 0 16px;
+	font-size: 18px;
+	color: #c4c3ca;
+	font-weight: 500;
+	outline: none;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+}
+input[type="submit"]{
+  background-color: #00bdf4;
+  border: none;
+  width: 30%;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(78, 73, 79, .5);
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+input[type="submit"]:hover{
+	background-color: #20cdff;
+	box-shadow: 0 3px 4px 0 rgba(78, 73, 79, .5);
+}
+input[type="submit"]:active{
+	background-color: #00b4e8;
+	box-shadow: 0 3px 4px 0 rgba(78, 73, 79, .5);
+}
+input[type="button"]{
+  background-color: #e80063;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 16px;
+  padding: 6px 15%;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(78, 73, 79, .5);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+input[type="button"]:hover{
+	background-color: #ff2884;
+	box-shadow: 0 2px 4px 0 rgba(78, 73, 79, .5);
+}
+input[type="button"]:active{
+	background-color: #e30061;
+	box-shadow: 0 2px 4px 0 rgba(78, 73, 79, .5);
+}
+#selectSid{
+	background-color: #4E495D;
+	width: 70%;
+	height: 48px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	padding: 0 16px;
+	font-size: 18px;
+	color: #c4c3ca;
+	font-weight: 500;
+	outline: none;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(78, 73, 79, .5);
+}
